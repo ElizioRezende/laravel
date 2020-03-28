@@ -12,3 +12,5 @@ npm-debug.log
 yarn-error.log
 .docker/dbdata
 .idea
+.docker/dbdata/
+.docker/dbdata/*
