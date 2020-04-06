@@ -17,8 +17,8 @@ on:
 
 # Environment variables available to all jobs and steps in this workflow
 env:
-  GKE_PROJECT: ${{ secrets.GKE_PROJECT }}
-  GKE_EMAIL: ${{ secrets.GKE_EMAIL }}
+  GKE_PROJECT: crucial-gasket-273416
+  GKE_EMAIL: elizio@unikasistemas.com.br
   GITHUB_SHA: ${{ github.sha }}
   GKE_ZONE: southamerica-east1-b
   GKE_CLUSTER: crucial-cluster
