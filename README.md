@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## Projeto Laravel Elizio Rezendee
+## Projeto Laravel Elizio Rezende
 
 Docker hub URL: eliziorezende/laravel
 
