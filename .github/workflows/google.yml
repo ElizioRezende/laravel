@@ -64,7 +64,7 @@ jobs:
     - name: Set up Kustomize
       run: |
         docker-compose up -d
-        docker ps
+        kubectl describe deployments
 
     # Deploy the Docker image to the GKE cluster
     - name: Deploy
