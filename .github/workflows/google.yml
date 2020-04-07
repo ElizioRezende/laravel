@@ -63,7 +63,7 @@ jobs:
     # Set up kustomize
     - name: Set up Kustomize
       run: |
-        docker-compose up
+        docker-compose up -d
 
     # Deploy the Docker image to the GKE cluster
     - name: Deploy
