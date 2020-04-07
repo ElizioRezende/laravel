@@ -24,7 +24,7 @@ env:
   GKE_CLUSTER: crucial-cluster
   IMAGE: laravel_nginx
   REGISTRY_HOSTNAME: gcr.io
-  DEPLOYMENT_NAME: laravel_nginx:latest
+  DEPLOYMENT_NAME: laravel_nginx
 
 jobs:
   setup-build-publish-deploy:
