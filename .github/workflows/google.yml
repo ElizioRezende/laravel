@@ -24,7 +24,7 @@ env:
   GKE_CLUSTER: crucial-cluster
   IMAGE: laravel_nginx
   REGISTRY_HOSTNAME: gcr.io
-  DEPLOYMENT_NAME: crucial-gasket-273416
+  DEPLOYMENT_NAME: crucial-gasket
 
 jobs:
   setup-build-publish-deploy:
@@ -64,8 +64,6 @@ jobs:
     - name: Set up Kustomize
       run: |
         docker-compose up -d
-        curl -o kustomize --location https://github.com/kubernetes-sigs/kustomize/releases/download/v3.1.0/kustomize_3.1.0_linux_amd64
-        chmod u+x ./kustomize
 
     # Deploy the Docker image to the GKE cluster
     - name: Deploy
