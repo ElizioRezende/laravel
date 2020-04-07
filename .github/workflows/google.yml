@@ -24,7 +24,7 @@ env:
   GKE_CLUSTER: crucial-cluster
   IMAGE: laravel_nginx
   REGISTRY_HOSTNAME: gcr.io
-  DEPLOYMENT_NAME: laravel
+  DEPLOYMENT_NAME: laravel_nginx
 
 jobs:
   setup-build-publish-deploy:
@@ -63,7 +63,7 @@ jobs:
     # Set up kustomize
     - name: Set up Kustomize
       run: |
-        docker-compose up -d laravel
+        docker-compose up -d
 
     # Deploy the Docker image to the GKE cluster
     - name: Deploy
