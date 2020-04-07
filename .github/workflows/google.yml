@@ -24,7 +24,7 @@ env:
   GKE_CLUSTER: crucial-cluster
   IMAGE: laravel_nginx
   REGISTRY_HOSTNAME: gcr.io
-  DEPLOYMENT_NAME: laravel_nginx
+  DEPLOYMENT_NAME: app
 
 jobs:
   setup-build-publish-deploy:
@@ -71,5 +71,5 @@ jobs:
         gcloud container clusters get-credentials $GKE_CLUSTER --zone $GKE_ZONE --project $GKE_PROJECT
         #./kustomize edit set image $REGISTRY_HOSTNAME/$GKE_PROJECT/$IMAGE:${GITHUB_SHA}
         #./kustomize build . | kubectl apply -f -
-        kubectl rollout status deployment/$DEPLOYMENT_NAME
+        kubectl rollout status deployment/$DEPLOYMENT_NAME --namespace=app
         kubectl get services -o wide
